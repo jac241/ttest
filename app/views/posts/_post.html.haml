@@ -1,0 +1,12 @@
+- cache post do
+  %p
+    %b= post.title
+    %br
+    = post.body
+    %br
+    %em
+      Post:
+      = post.id
+      = link_to 'edit', edit_post_path(post)
+      \|
+      = link_to 'delete', post, method: :delete

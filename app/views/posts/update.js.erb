@@ -1,0 +1,2 @@
+var selector = '#edit_post_' + <%= @post.id %>
+$(selector).html('<%= j render 'form', remote: true %>')

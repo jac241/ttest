@@ -1,0 +1,16 @@
+- cache @posts do
+  %h4 Posts
+  %p Here are your posts!
+
+  #posts
+  - if @posts.present?
+    =render @posts
+  - else
+    %p
+      No posts to display
+
+  %h4 Add a post
+
+  = render 'form', remote: true
+
+  =link_to 'Home', '/'
